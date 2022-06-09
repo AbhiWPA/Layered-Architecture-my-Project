@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="context" prefHeight="354.0" prefWidth="593.0" style="-fx-background-color: #d9f7ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemListFormController">
+   <children>
+      <TableView fx:id="tblItem" layoutX="14.0" layoutY="64.0" prefHeight="283.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="169.0" text="Description" />
+            <TableColumn fx:id="colPackSize" prefWidth="94.0" text="Pack Size" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="116.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="111.0" text="QTY On Hand" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="30.0" layoutY="14.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="523.0" promptText="Search an Item">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="36.0" layoutY="30.0" opacity="0.43" />
+      <Line endX="-115.0" endY="-24.0" layoutX="170.0" layoutY="60.0" startX="-115.0" startY="-43.0" stroke="#868282" />
+   </children>
+</AnchorPane>

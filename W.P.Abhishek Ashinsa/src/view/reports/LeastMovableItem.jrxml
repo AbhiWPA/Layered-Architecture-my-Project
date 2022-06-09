@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LeastMovableItem" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5f1afd5-e2bf-438e-a294-e6011381a6ef">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Wholesale_Market"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="itemName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT ItemCode, COUNT(*) FROM order_detail GROUP BY ItemCode;]]>
+	</queryString>
+	<field name="ItemCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ItemCode"/>
+		<property name="com.jaspersoft.studio.field.label" value="ItemCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_detail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COUNT(*)" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="COUNT(*)"/>
+		<property name="com.jaspersoft.studio.field.label" value="COUNT(*)"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="555" height="27" uuid="90529f6c-d612-4756-8308-9ab639a3ef7e"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Least Movable Items]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="555" height="26" uuid="f05dba7e-e69b-4f67-bca8-9bea76fe548c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wholesale Market]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="55" width="555" height="1" uuid="3d6ba650-a415-4429-a62c-55c9d9aab4c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="60" y="64" width="100" height="23" uuid="ef4fd1fb-ee05-48fa-bda6-71230c0de7ba"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="64" width="43" height="23" uuid="471d956e-209f-4d8c-ba02-b778420a6306"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="91" width="555" height="1" uuid="9c20d91f-12a5-497c-b0da-33d550a3ad85">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField pattern="HH:mm">
+				<reportElement x="420" y="64" width="100" height="23" uuid="662451c8-18f7-443f-b847-41966b64ead9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="64" width="50" height="23" uuid="271049a2-a68a-462c-b654-16f8610a1719"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Time : ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="539" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="20" width="555" height="450" uuid="a5b72a30-7572-44f3-9166-13598b39f6ab"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{ItemCode}]]></keyExpression>
+					<valueExpression><![CDATA[$F{COUNT(*)}]]></valueExpression>
+					<labelExpression><![CDATA[$F{ItemCode}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<textField>
+				<reportElement x="360" y="490" width="192" height="20" uuid="64b53618-08be-4bbf-a45a-ebfa91a7c53f"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itemName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="205" y="490" width="155" height="20" uuid="908f8d32-22c2-4af6-bfc9-cabf1216062f"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Least Movable Item :]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

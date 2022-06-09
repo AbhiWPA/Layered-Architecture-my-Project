@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerDetailsFormController">
+   <children>
+      <ImageView fitHeight="544.0" fitWidth="600.0" opacity="0.71" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/b2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="19.0" text="Manage Customer Details">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="59.0" prefHeight="3.0" prefWidth="583.0" />
+      <ImageView fx:id="imgHome" fitHeight="42.0" fitWidth="48.0" layoutX="16.0" layoutY="10.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgList" fitHeight="69.0" fitWidth="79.0" layoutX="49.0" layoutY="80.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/items.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgAddCustomer" fitHeight="69.0" fitWidth="79.0" layoutX="179.0" layoutY="80.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-add-user-male-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgUpdateCustomer" fitHeight="69.0" fitWidth="79.0" layoutX="324.0" layoutY="80.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-life-cycle-skin-type-7-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgDeleteCustomer" fitHeight="69.0" fitWidth="79.0" layoutX="458.0" layoutY="80.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-unfriend-skin-type-7-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblNote" layoutX="217.0" layoutY="154.0" text="Select One of above" textFill="#cd2424">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="9.0" layoutY="190.0" prefHeight="3.0" prefWidth="583.0" />
+      <AnchorPane fx:id="context2" layoutX="25.0" layoutY="202.0" prefHeight="334.0" prefWidth="543.0" style="-fx-background-color: #d9f7ff;">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="14.0" layoutY="8.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="440.0" promptText="Search Customer">
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </TextField>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="20.0" layoutY="24.0" opacity="0.43" />
+            <Line endX="-115.0" endY="-24.0" layoutX="154.0" layoutY="54.0" startX="-115.0" startY="-43.0" stroke="#868282" />
+            <TableView fx:id="tblCustomer" layoutX="5.0" layoutY="45.0" prefHeight="287.0" prefWidth="525.0">
+              <columns>
+                <TableColumn fx:id="colCustId" prefWidth="78.0" text="Customer Id" />
+                <TableColumn fx:id="colName" prefWidth="153.0" text="Customer Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="181.0" text="Customer Address" />
+                  <TableColumn fx:id="colCity" prefWidth="112.0" text="City" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="457.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsFormController">
+   <children>
+      <ImageView fitHeight="539.0" fitWidth="677.0" opacity="0.71" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/b2.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#001c83" layoutX="252.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Items">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Text>
+      <Separator layoutX="14.0" layoutY="51.0" prefHeight="10.0" prefWidth="649.0" />
+      <ImageView fx:id="imgList" fitHeight="69.0" fitWidth="72.0" layoutX="130.0" layoutY="71.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnteredOnAction" onMouseExited="#mouseExitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-todo-list.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgAddNew" fitHeight="69.0" fitWidth="69.0" layoutX="252.0" layoutY="71.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnteredOnAction" onMouseExited="#mouseExitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-plus-+.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgUpdate" fitHeight="69.0" fitWidth="69.0" layoutX="364.0" layoutY="71.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnteredOnAction" onMouseExited="#mouseExitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-synchronize.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgDelete" fitHeight="69.0" fitWidth="69.0" layoutX="476.0" layoutY="71.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnteredOnAction" onMouseExited="#mouseExitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-waste.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblNote" layoutX="254.0" layoutY="147.0" text="Select One of above" textFill="#f82222">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="41.0" fitWidth="46.0" layoutX="21.0" layoutY="9.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnteredOnAction" onMouseExited="#mouseExitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="23.0" layoutY="169.0" prefHeight="10.0" prefWidth="636.0" />
+      <AnchorPane fx:id="context2" layoutX="42.0" layoutY="180.0" prefHeight="354.0" prefWidth="593.0" style="-fx-background-color: #d9f7ff;">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="35.0" layoutY="14.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="523.0" promptText="Search an Item">
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </TextField>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="41.0" layoutY="30.0" opacity="0.43" />
+            <Line endX="-115.0" endY="-24.0" layoutX="175.0" layoutY="60.0" startX="-115.0" startY="-43.0" stroke="#868282" />
+            <TableView fx:id="tblItem" layoutX="14.0" layoutY="58.0" prefHeight="290.0" prefWidth="563.0">
+              <columns>
+                  <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+                  <TableColumn fx:id="colDescription" prefWidth="169.0" text="Description" />
+                  <TableColumn fx:id="colPackSize" prefWidth="94.0" text="Pack Size" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="116.0" text="Unit Price" />
+                  <TableColumn fx:id="colQty" prefWidth="111.0" text="QTY On Hand" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

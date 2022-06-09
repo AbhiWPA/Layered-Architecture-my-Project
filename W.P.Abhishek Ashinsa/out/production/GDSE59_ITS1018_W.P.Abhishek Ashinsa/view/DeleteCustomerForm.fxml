@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="334.0" prefWidth="543.0" style="-fx-background-color: #d9f7ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteCustomerFormController">
+   <children>
+      <Label layoutX="172.0" layoutY="14.0" text="Delete A Customer" textFill="#dd3e3e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="47.0" prefHeight="3.0" prefWidth="521.0" />
+      <Pane layoutX="33.0" layoutY="73.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="134.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Select Customer Id Here">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbCustomerId" focusColor="BLACK" layoutX="7.0" layoutY="7.0" prefHeight="33.0" prefWidth="214.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="73.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="92.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Customer Name">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerName" alignment="CENTER" layoutX="7.0" layoutY="9.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="145.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="104.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Customer Address">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerAddress" alignment="CENTER" layoutX="7.0" layoutY="9.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="145.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="35.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="City">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerCity" alignment="CENTER" layoutX="7.0" layoutY="9.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="219.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="53.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Province">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerProvince" alignment="CENTER" layoutX="7.0" layoutY="9.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="219.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="69.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Postal Code">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPostalCode" alignment="CENTER" layoutX="7.0" layoutY="9.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnDelete" layoutX="224.0" layoutY="279.0" onAction="#DeleteBtnOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: #a40c0c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" wrappingWidth="24.714285850524902" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

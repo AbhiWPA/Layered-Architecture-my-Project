@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="354.0" prefWidth="593.0" style="-fx-background-color: #d9f7ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateItemFormController">
+   <children>
+      <Label layoutX="226.0" layoutY="20.0" text="Update Item Details" textFill="#e14f4f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="9.0" layoutY="46.0" prefHeight="10.0" prefWidth="575.0" />
+      <Pane layoutX="48.0" layoutY="77.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="125.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Select Item Code Here">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbItemCode" focusColor="BLACK" layoutX="7.0" layoutY="7.0" prefHeight="33.0" prefWidth="214.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="312.0" layoutY="77.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="70.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Description">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDescription" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="48.0" layoutY="150.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="58.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Pack Size">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPackSize" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="312.0" layoutY="150.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="58.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Unit Price">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUnitPrice" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="183.0" layoutY="216.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="79.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Qty On Hand">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQtyOnHand" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="240.0" layoutY="287.0" onAction="#UpdateBtnOnAction" prefHeight="41.0" prefWidth="114.0" style="-fx-background-color: #1622aa; -fx-background-radius: 20px;" text="Update" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="15" wrappingWidth="21.857142448425293" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

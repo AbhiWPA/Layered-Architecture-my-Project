@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="context" prefHeight="334.0" prefWidth="543.0" style="-fx-background-color: #d9f7ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewCustomerFormController">
+   <children>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="215.0" layoutY="275.0" onAction="#addBtnOnAction" prefHeight="37.0" prefWidth="113.0" style="-fx-background-color: #002472;" text="Add New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" wrappingWidth="17.3916015625" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="180.0" layoutY="6.0" text="Add New Customer" textFill="#dd3e3e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="40.0" prefHeight="3.0" prefWidth="521.0" />
+      <Pane layoutX="29.0" layoutY="67.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="70.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Customer ID">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustId" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="282.0" layoutY="67.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="93.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Customer Name">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustName" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="29.0" layoutY="138.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="103.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Customer Address">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustAddress" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="282.0" layoutY="138.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="32.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="City">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCity" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="29.0" layoutY="212.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="53.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Province">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbProvince" focusColor="BLACK" layoutX="7.0" layoutY="7.0" prefHeight="33.0" prefWidth="214.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="282.0" layoutY="212.0" prefHeight="41.0" prefWidth="227.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9f7ff" height="21.0" layoutX="11.0" layoutY="-9.0" stroke="#d9f7ff" strokeType="INSIDE" width="70.0" />
+            <Label layoutX="13.0" layoutY="-8.0" text="Postal Code">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPostalCode" alignment="CENTER" focusColor="BLACK" layoutX="7.0" layoutY="7.0" onKeyPressed="#enterKeyPressed" prefHeight="33.0" prefWidth="214.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

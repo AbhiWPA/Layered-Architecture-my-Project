@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="331.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierDashBoardFormController">
+   <children>
+      <ImageView fitHeight="331.0" fitWidth="636.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="268.0" fitWidth="295.0" layoutX="171.0" layoutY="32.0" opacity="0.1" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/casheer.png" />
+         </image>
+      </ImageView>
+      <Text fill="#3816b2" layoutX="217.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier Dash Board">
+         <font>
+            <Font name="Tahoma Bold" size="22.0" />
+         </font>
+      </Text>
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="14.0" prefWidth="608.0" />
+      <Label fx:id="lblNote" layoutX="274.0" layoutY="255.0" text="Welcome...!" textFill="#d31616">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="189.0" layoutY="285.0" text="Please select one of above options to continue." textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgCustomer" fitHeight="110.0" fitWidth="117.0" layoutX="79.0" layoutY="111.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/customer2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgOrder" fitHeight="110.0" fitWidth="110.0" layoutX="263.0" layoutY="111.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/icons8-purchase-order-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnLogout" alignment="CENTER" buttonType="RAISED" layoutX="14.0" layoutY="13.0" onAction="#logoutBtnOnAction" prefHeight="38.0" prefWidth="34.0" text=".">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#ff0b0b" glyphName="POWER_OFF" size="35" wrappingWidth="23.0" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="imgEdit" fitHeight="110.0" fitWidth="110.0" layoutX="433.0" layoutY="111.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/icons8-edit-property-96.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

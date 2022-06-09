@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="354.0" prefWidth="593.0" style="-fx-background-color: #d9f7ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewItemFormController">
+   <children>
+      <Label layoutX="229.0" layoutY="14.0" text="Add New Item" textFill="#e14f4f">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="43.0" prefHeight="0.0" prefWidth="564.0" />
+      <Label layoutX="55.0" layoutY="65.0" text="Item Code :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="118.0" text="Descrioption :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="171.0" text="Pack Size :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="217.0" text="Unit Price :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="270.0" text="Quantity On Hand :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemCode" focusColor="BLACK" layoutX="206.0" layoutY="63.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDescription" focusColor="BLACK" layoutX="206.0" layoutY="116.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPackSize" focusColor="BLACK" layoutX="206.0" layoutY="169.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="BLACK" layoutX="206.0" layoutY="215.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="BLACK" layoutX="206.0" layoutY="268.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="220.0" layoutY="309.0" onAction="#addBtnOnAction" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #002472;" text="Add New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" wrappingWidth="17.3916015625" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
